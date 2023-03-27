@@ -1,0 +1,32 @@
+1 - Modelo para expressar como funciona um sistema gerenciador de biblioteca
+Projetado no Figma e repassado para o papel
+Link Figma:https://www.figma.com/file/3CCN9XikqGkczoQQTYrL55/Modelagem-banco-de-dados-de-uma-biblioteca?node-id=0%3A1&t=Cqdd5u8CxOzZxxLL-1
+
+2 - Quais são os dados que precisamos guardar?
+Os dados que precisamos guardar serão:
+Livro: 
+Código(int[10])AutoIncrement NOT NULL, Ativo(boolean) NOT NULL, Nome(varchar[45]), Autor(varchar[45]),Editora(varchar[30]), Imagem_Capa(image), Data_lançamento(date), Usuário_id(int[10]) foreign key, Localização(varchar[45])
+
+Usuário: 
+ID(int[10] AutoIncrement NOT NULL), Ativo(boolean) NOT NULL, Nome(varchar[40]), CPF(char[11]), Email(varchar[45]), Telefone(int[20]), Data_Nascimento(date),
+
+Bibliotecário: 
+ID(int[10]), Nome(varchar[40]), Usuário(varchar[20]), Senha(varchar[20])
+
+3 - Quais consultas um usuário pode fazer na biblioteca?
+Na condição dessa biblioteca terá vários livros nas prateleiras, mas terá também uma tela interativa onde o usuário poderá digitar o nome do livro, autor, editora ou data de lançamento, e assim o sistema irá mostrar as informações do livro e se estiver disponível irá mostrar a localização, após estar com o livro em mãos o usuário poderá se digir ao bibliotecário e fazer a reserva, se o livro estiver vinculado a um usuário o livro estará indisponível
+
+
+4 - Quais consultas e ações (e.g., empréstimo de livro) podem ser realizadas?
+Cadastrar livro(Bibliotecário poderá cadastrar novos livros no sistema)
+Descartar livro(Quando o livro estiver muito velho e precisar ser descartado o Bibliotecário poderá desativar o livro)
+Consultar livro(Usuário poderá consultar o livro pelo Código, Nome, Autor, Data de lançamento ou Editora) 
+Cadastrar usuário(Bibliotecário irá fazer o cadastro do usuário no sistema, Nome, CPF, Telefone, E-mail, Data de nascimento)
+Desativas usuário(Bibliotecário poderá desativar o cadastro de um usuário caso seja necessário)
+Realizar empréstimo(Bibliotecário irá vincular o usuário ao livro e o sistema irá gerar uma data de duas semanas à frente do dia atual para que o usuário possa realizar a devolução)
+Prolongar empréstimo(Usuário poderá ir a Biblioteca e prolongar por mais duas semanas o empréstimo do livro pela tela interativa)
+Devolver livro (Usuário irá devolver o livro para o bibliotecário, e o sistema irá verificar se está na data correta de devolução, caso haja um atraso será gerada uma multa para o usuário)
+
+
+
+
