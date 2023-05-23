@@ -1,0 +1,19 @@
+Trabalho banco de dados
+
+Integrantes do grupo:
+Aluno: João Pedro R. Leite RA: A2487055
+Aluno: Lucas Oliveira de Farias RA: A2371600
+Aluno: Eduardo de Souza RA: A2432226
+Aluno: Matheus Leal RA: A2160250
+
+
+Definição inicial do tema:
+Nosso tema será um banco de dados para comportar um sistema de uma barbearia
+
+Objetivo geral:
+O objetivo será criar um banco de dados relacional com várias tabelas, para salvar as informações da Barbearia(Nome, Localização, horário de atendimento), Clientes(Nome, CPF, E-mail), Barbeiro(Nome, CPF, telefone etc) 
+
+
+d) Objetivos específicos.
+Criar um relacionamento entre cliente, serviços, produtos e agendamentos.
+Através de dados preenchidos nessas tabelas, sera possivel realizar consultas especificas, para possiveis relatórios.
